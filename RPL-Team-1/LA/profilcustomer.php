@@ -3,7 +3,13 @@
 <?php
 	include 'db_connect.php';
 	session_start();
+   if($_SESSION['status'] == "user"){
+      $id = $_SESSION['id'];
+      $query = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust = '$id'");
+      $data= mysqli_fetch_array($query);
+
 ?>
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,7 +66,7 @@
 			<li>
 			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
 			</li>
-			<?php } ?>
+			<?php } }?>
 		</ul>
 	</div>
 
@@ -115,12 +121,16 @@
                         <div class="col-xs-12 col-sm-8">
                            <ul class="list-group">
                               <h1> Customer Profile </h1>
-                              <li class="list-group-item">Sinduwinarta</li>
-                              <li class="list-group-item">Bussinessman</li>
-                              <li class="list-group-item">Woddy Wooden Craft </li>
-                              <li class="list-group-item"><i class="fa fa-phone"></i> 0897-815-3722 </li>
-                              <li class="list-group-item"><i class="fa fa-envelope"></i> sinduwinarta@gmail.com</li>
+
+                              <li class="list-group-item">Name    : <br><i class="fa fa-user"></i><?php echo ' ', $data['fname_cust'],' ', $data['lname_cust'] ?></li>
+                              <li class="list-group-item">My birthday    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
+                              <li class="list-group-item">Address    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
+                              <li class="list-group-item">Telephone number    : <br><i class="fa fa-phone"></i> <?php echo ' ', $data['telephone_cust'] ?> </li>
+                              <li class="list-group-item">Country    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
+                              <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
+                              <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
                            </ul>
+                           <center> <button>Change
                         </div>
                      </div>
                   </div>

@@ -2,8 +2,12 @@
 <html lang="en">
 <?php
 	include 'db_connect.php';
+	if(empty($_SESSION['status'])) {?>
+		<script language="javascript">alert("Please Login First");</script>
+		<script>document.location.href="login/login.php";</script>
+	}<?
 	session_start();
-   if($_SESSION['status'] == "user"){
+   if(!empty($_SESSION['status'])){
       $id = $_SESSION['id'];
       $query = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust = '$id'");
       $data= mysqli_fetch_array($query);

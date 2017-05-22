@@ -11,14 +11,14 @@ if($_POST) {
 	$password_cust = $_POST['password_cust'];
 	$usercheck = mysqli_query($connect,"SELECT * FROM customer WHERE username_cust = '$username_cust'");
 	$emailcheck = mysqli_query($connect,"SELECT * FROM customer WHERE email_cust = '$email_cust'");
-	if(mysqli_num_rows($usercheck) > 1){ 
+	if(mysqli_num_rows($usercheck) > 0 ){
 		?>
 			<script language="javascript">alert("Username is already taken!"); </script>
         	<script>document.location.href='../login/signup.php'; </script>
             $еrror = true;
             <?php
     }
-    elseif(mysqli_num_rows($emailcheck) > 1){ ?>
+    elseif(mysqli_num_rows($emailcheck) > 0){ ?>
 			<script language="javascript">alert("email is already exist!");</script>
         	<script>document.location.href='../login/signup.php';</script>
             $еrror = true;

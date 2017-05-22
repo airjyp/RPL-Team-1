@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Customer Profile</title>
+<title><?php echo ' ', $data['username_cust'] ?>'s Profile</title>
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 <!-- Custom Fonts -->
@@ -120,7 +120,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-8">
                            <ul class="list-group">
-                              <h1> Customer Profile </h1>
+                              <h1><?php echo ' ', $data['username_cust'] ?>'s profile </h1>
 
                               <li class="list-group-item">Name    : <br><i class="fa fa-user"></i><?php echo ' ', $data['fname_cust'],' ', $data['lname_cust'] ?></li>
                               <li class="list-group-item">My birthday    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>

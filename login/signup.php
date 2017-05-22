@@ -99,14 +99,17 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<li>
-			<a class="page-scroll" href="../index.php">Home</a>
+			<a class="page-scroll" href="../index.php#page-top">Home</a>
+			</li>
+			<li>
+			<a class="page-scroll" href="../index.php#about">About</a>
 			</li>
 			<li>
 			<a class="page-scroll" href="../index.php#services">Services</a>
 			</li>
-			<li>
-			<a class="page-scroll" href="#">Profile</a>
-			</li>
+		  <li>
+		  <a class="page-scroll" href="../index.php#testimonials">Testimony</a>
+		  </li>
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->
@@ -133,17 +136,23 @@
 									<p>First name</p>
 									<input type="text" name="fname_cust" placeholder="Your first name" required minlength="3" />
 									<p>Last Name</p>
-									<input type="text" name="lname_cust" placeholder="Last Name - Optional" /></p>
-									<p>Telephone</p>
-									<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" />
-									<p>Email</p>
-									<input type="email" name="email_cust" placeholder="Email" required />
+									<input type="text" name="lname_cust" placeholder="Last Name - Optional" />
 									<p>Username</p>
 									<input type="text" name="username_cust" placeholder="Username" required minlength="6" />
 									<p>Password</p>
 									<input type="password" name="password_cust" placeholder="Password" required minlength="8" />
+									<p>Birtdate</p>
+									<input type="date" name="birthdate" placeholder="Birth date" />
+									<p>Address</p>
+									<input type="text" name="address_cust" placeholder="Address" />
+									<p>Telephone</p>
+									<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" />
+									<p>Email</p>
+									<input type="email" name="email_cust" placeholder="Email" required />
+									<p>About Me</p>
+									<input type="text" name="aboutme" placeholder="About Me"/>
 									<p>Photo</p>
-		    						<input class="w3-input w3-border" class="file-path validate" type="file" name="photomember" placeholder="Upload your photo, max 1 MB"  required>
+		    						<input class="w3-input w3-border" class="file-path validate" type="file" name="photomember" placeholder="Upload your photo, max 1 MB">
 									<input type="checkbox" id="brand" value="">
 									<label for="brand"><span></span> Remember me ?</label>
 									<input type="submit" value="SIGNUP As Customer">

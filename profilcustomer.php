@@ -6,7 +6,7 @@
 	if(empty($_SESSION['status'])) {?>
 		<script language="javascript">alert("Please Login First");</script>
 		<script>document.location.href="login/login.php";</script>
-	<?php } 
+	<?php }
    else {
    if(!empty($_SESSION['status'])){
       $id = $_SESSION['id'];
@@ -90,7 +90,7 @@
                      <div class="col-lg-12">
                         <div class="col-xs-12 col-sm-4">
                            <figure>
-                              <img class="img-circle img-responsive" alt="" src="img/testi2.jpg">
+                              <img class="img-circle img-responsive" alt="" src="img/testi1.jpg">
                            </figure>
                            <div class="row">
                               <div class="col-xs-12 social-btns">
@@ -128,12 +128,11 @@
                               <h1><?php echo ' ', $data['username_cust'] ?>'s profile </h1>
 
                               <li class="list-group-item">Name    : <br><i class="fa fa-user"></i><?php echo ' ', $data['fname_cust'],' ', $data['lname_cust'] ?></li>
-                              <li class="list-group-item">My birthday    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
+                              <li class="list-group-item">My birthday    : <br><i class="fa fa-home"></i><?php echo ' ', $data['birthdate'] ?></li>
                               <li class="list-group-item">Address    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
                               <li class="list-group-item">Telephone number    : <br><i class="fa fa-phone"></i> <?php echo ' ', $data['telephone_cust'] ?> </li>
-                              <li class="list-group-item">Country    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
-                              <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
+                              <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['aboutme'] ?></li>
                            </ul>
                            <center> <button>Change
                         </div>

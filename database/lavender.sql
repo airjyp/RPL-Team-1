@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2017 at 03:59 PM
+-- Generation Time: May 22, 2017 at 12:29 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -57,9 +57,11 @@ CREATE TABLE `customer` (
   `id_cust` int(5) NOT NULL,
   `fname_cust` varchar(50) NOT NULL,
   `lname_cust` varchar(50) NOT NULL,
+  `birthdate` date NOT NULL,
   `telephone_cust` varchar(15) NOT NULL,
   `email_cust` varchar(50) NOT NULL,
   `address_cust` text NOT NULL,
+  `aboutme` text NOT NULL,
   `username_cust` varchar(20) NOT NULL,
   `password_cust` varchar(20) NOT NULL,
   `active` int(1) NOT NULL DEFAULT '1',
@@ -70,10 +72,8 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id_cust`, `fname_cust`, `lname_cust`, `telephone_cust`, `email_cust`, `address_cust`, `username_cust`, `password_cust`, `active`, `avatar`) VALUES
-(38, 'pam', 'budi', '989897889', 'prasetyopambudi@yahoo.com', '', 'pampam', 'popo09po', 1, ''),
-(39, 'air', 'jyp', '08090980909', 'airaja@gmail.com', '', 'airair', 'berhasil', 1, ''),
-(40, 'NUH', 'SAT', '083891220022', 'nuhsatria@gmail.com', '', 'nuhsat', 'berhasil', 1, '');
+INSERT INTO `customer` (`id_cust`, `fname_cust`, `lname_cust`, `birthdate`, `telephone_cust`, `email_cust`, `address_cust`, `aboutme`, `username_cust`, `password_cust`, `active`, `avatar`) VALUES
+(41, 'Prasetyo', 'Pambudi', '1997-03-11', '08988544782', 'prasetyopambudi@yahoo.com', 'Jakarta', 'Good boy', 'prasetyopamb', 'Pampam11', 1, '');
 
 -- --------------------------------------------------------
 
@@ -172,7 +172,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_cust` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_cust` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `transaction`
 --

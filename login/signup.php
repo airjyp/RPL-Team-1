@@ -141,18 +141,11 @@
 									<input type="text" name="username_cust" placeholder="Username" required minlength="6" />
 									<p>Password</p>
 									<input type="password" name="password_cust" placeholder="Password" required minlength="8" />
-									<p>Birtdate</p>
-									<input type="date" name="birthdate" placeholder="Birth date" />
-									<p>Address</p>
-									<input type="text" name="address_cust" placeholder="Address" />
 									<p>Telephone</p>
 									<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" />
 									<p>Email</p>
 									<input type="email" name="email_cust" placeholder="Email" required />
-									<p>About Me</p>
-									<input type="text" name="aboutme" placeholder="About Me"/>
-									<p>Photo</p>
-		    						<input class="w3-input w3-border" class="file-path validate" type="file" name="photomember" placeholder="Upload your photo, max 1 MB">
+                                    <br>
 									<input type="checkbox" id="brand" value="">
 									<label for="brand"><span></span> Remember me ?</label>
 									<input type="submit" value="SIGNUP As Customer">

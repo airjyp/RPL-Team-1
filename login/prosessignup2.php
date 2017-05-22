@@ -18,7 +18,7 @@ if($_POST) {
             <?php
     }
     
-    else if(mysqli_num_rows($emailcheck) > 1){ ?>
+    elseif(mysqli_num_rows($emailcheck) > 1){ ?>
 			<script language="javascript">alert("email is already exist!");</script>
         	<script>document.location.href='../login/signup.php';</script>
             $еrror = true;

@@ -134,7 +134,8 @@
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
                               <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['aboutme'] ?></li>
                            </ul>
-                           <center> <button>Change
+                           <center> <button onclick="window.location.href='update1.php'">Change</button>
+
                         </div>
                      </div>
                   </div>

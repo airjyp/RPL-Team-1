@@ -8,6 +8,7 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="login/signup1.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
 <!-- web font -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
@@ -117,9 +118,11 @@
 <!-- /.container -->
 </nav>
 <br>
-	<div class="main">
-		<h1 style="color:white"> Lavender Register </h1>
-		<div class="login-form">
+	<div class="container">
+    <h1 class="well">Lavender Register</h1>
+	<div class="login-form">
+	<div class="sap_tabs w3ls-tabs">
+	<div class="row">
 			<div class="sap_tabs w3ls-tabs">
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list">
@@ -129,57 +132,86 @@
 					<div class="clear"> </div>
 					<div class="resp-tabs-container">
 
-							<!-- SIGN UP CUSTOMER -->
-						<div class="tab-0 resp-tab-content" aria-labelledby="tab_item-0">
-							<div class="login-agileits-top">
-								<form action="prosessignup1.php" method="post">
-									<p>First name</p>
-									<input type="text" name="fname_cust" placeholder="Your first name" required minlength="3" />
-									<p>Last Name</p>
-									<input type="text" name="lname_cust" placeholder="Last Name - Optional" />
-									<p>Username</p>
-									<input type="text" name="username_cust" placeholder="Username" required minlength="6" />
-									<p>Password</p>
-									<input type="password" name="password_cust" placeholder="Password" required minlength="8" />
-									<p>Telephone</p>
-									<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" />
-									<p>Email</p>
-									<input type="email" name="email_cust" placeholder="Email" required />
-                                    <br>
-									<input type="checkbox" id="brand" value="">
-									<label for="brand"><span></span> Remember me ?</label>
-									<input type="submit" value="SIGNUP As Customer">
-									<div class="input-field col s12">
+				<!-- SIGN UP CUSTOMER -->
+				<div class="tab-0 resp-tab-content" aria-labelledby="tab_item-0">
+				<div class="login-agileits-top">
+				<form action="prosessignup1.php" method="post">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>First Name</label>
+								<input type="text" name="fname_cust" placeholder="Your first name" required minlength="3" class="form-control">
 							</div>
-								</form>
+							<div class="col-sm-6 form-group">
+								<label>Last Name</label>
+								<input type="text" name="lname_cust" placeholder="Last Name - Optional" class="form-control">
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>Username</label>
+								<input type="text" name="username_cust" placeholder="Username" required minlength="6" class="form-control">
+							</div>
+							<div class="col-sm-6 form-group">
+								<label>Password</label>
+								<input type="text" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
+							</div>
+						</div>
+					<div class="form-group">
+						<label>Telephone</label>
+						<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="text" name="email_cust" placeholder="Email" required class="form-control">
+						<br>
+						<input type="submit" value="SIGNUP As Customer">
+					</div>
+				</form>
+				</div>
+	</div>
+	</div>
 
 						<!-- SIGN UP VENDOR -->
-						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-							<div class="login-form">
-								<form action="prosessignup2.php" method="post">
-									<p>First name</p>
-									<input type="text" name="fname_vendor" placeholder="Your first name" required minlength="3" />
-									<p>Last Name</p>
-									<input type="text" name="lname_vendor" placeholder="Last Name -- Optional" /></p>
-									<p>Telephone</p>
-									<input type="text" name="telephone_vendor" placeholder="Telephone" required minlength="10" />
-									<p>Email</p>
-									<input type="email" name="email_vendor" placeholder="Email" required />
-									<p>Username</p>
-									<input type="text" name="username_vendor" placeholder="Username" required minlength="6" />
-									<p>Password</p>
-									<input type="password" name="password_vendor" placeholder="Password" required minlength="8" />
-									<input type="checkbox" id="brand" value="">
-									<label for="brand"><span></span> Remember me ?</label>
-									<input type="submit" value="SIGNUP As Vendor">
-								</form>
+						<div class="tab-0 resp-tab-content" aria-labelledby="tab_item-1">
+				<div class="login-agileits-top">
+				<form action="prosessignup2.php" method="post">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>First Name</label>
+								<input type="text" name="fname_cust" placeholder="Your first name" required minlength="3" class="form-control">
+							</div>
+							<div class="col-sm-6 form-group">
+								<label>Last Name</label>
+								<input type="text" name="lname_cust" placeholder="Last Name - Optional" class="form-control">
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>Username</label>
+								<input type="text" name="username_cust" placeholder="Username" required minlength="6" class="form-control">
+							</div>
+							<div class="col-sm-6 form-group">
+								<label>Password</label>
+								<input type="text" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
+							</div>
+						</div>
+					<div class="form-group">
+						<label>Telephone</label>
+						<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" class="form-control">
 					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="text" name="email_cust" placeholder="Email" required class="form-control">
+						<br>
+						<input type="submit" value="SIGNUP As Vendor">
+					</div>
+				</form>
 				</div>
-			</div>
+	</div>
+	</div>
+
 			<!-- ResponsiveTabs js -->
 			<script type="text/javascript">
 				$(document).ready(function () {
@@ -194,9 +226,9 @@
 		</div>
 	</div>
 	<!-- //main -->
-
+<br>
 <!-- Section Footer
-================================================== -->
+==================================================
 <section class="bg-dark">
 <div class="container">
 <div class="row">
@@ -212,6 +244,7 @@
 	<div class="copyright">
 		<p> <br> <center> All rights reserved | Created by <a href="http://sinduwinarta.id/" target="_blank">MIPA (Memed, Ihda, Pam, AIR)</center></a></p>
 	</div>
+	-->
 	<!-- //copyright -->
 </div>
 </div>

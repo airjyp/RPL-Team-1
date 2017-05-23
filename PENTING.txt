@@ -8,3 +8,4 @@ intinya untuk yang kurang saat ini: #tolong ditambah
 4.
 
 
+http://itx.web.id/php/tutorial-upload-menyimpan-dan-menampilkan-gambar-dengan-php-dan-mysql/

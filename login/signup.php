@@ -1,3 +1,11 @@
+<?php
+include 'db_connect.php';
+session_start();
+if(!empty($_SESSION['status'])) {?>
+	<script>document.location.href="../profilcustomer.php";</script>
+<?php }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

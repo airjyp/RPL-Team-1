@@ -1,6 +1,9 @@
 <?php
 include "db_connect.php";
 session_start();
+if(empty($_SESSION['status'])) {?>
+  <script>document.location.href="login/login.php";</script>
+<?php }
 
 if(!empty($_SESSION['status'])){
    $id = $_SESSION['id'];

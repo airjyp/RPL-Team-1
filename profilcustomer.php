@@ -92,6 +92,8 @@
                            <figure>
                               <img class="img-circle img-responsive" alt="" src='images/".$data['avatar']."'>
                            </figure>
+
+													 	<center> <input type="button" value="Edit Avatar" onclick="window.location.href='editavatar.php';">
                            <div class="row">
                               <div class="col-xs-12 social-btns">
                                  <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">

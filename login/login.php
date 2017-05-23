@@ -3,6 +3,9 @@
 <?php
 	include 'db_connect.php';
 	session_start();
+	if(!empty($_SESSION['status'])) {?>
+		<script>document.location.href="../profilcustomer.php";</script>
+	<?php }
 ?>
 <head>
 <meta charset="utf-8">
@@ -92,10 +95,14 @@
 						<div class="tab-0 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="login-agileits-top">
 								<form action="proseslogin1.php" method="post">
+									<div class="col-sm-12 form-group">
 									<p>User Name </p>
 									<input type="text" name="username_cust" required=""/>
+								</div>
+								<div class="col-sm-12 form-group">
 									<p>Password</p>
 									<input type="password" name="password_cust" required=""/>
+								</div>
 									<input type="checkbox" id="brand" value="">
 									<label for="brand"><span></span> Remember me ?</label>
 									<input type="submit" value="LOGIN">

@@ -26,7 +26,7 @@ if($_POST) {
     }
 
     else {
-	$sql = "INSERT INTO customer (id_cust, fname_cust, lname_cust, telephone_cust, email_cust, address_cust, username_cust, password_cust, active, birthdate_cust, about_cust) VALUES ('', '$fname_cust', '$lname_cust', '$telephone_cust', '$email_cust', '','$username_cust', '$password_cust' ,1, '','') ";
+	$sql = "INSERT INTO customer (id_cust, fname_cust, lname_cust, telephone_cust, email_cust, address_cust, username_cust, password_cust, active, birthdate, aboutme) VALUES ('', '$fname_cust', '$lname_cust', '$telephone_cust', '$email_cust', '' , '$username_cust', '$password_cust' ,1, '','') ";
 	if($connect->query($sql) === TRUE) {
 
 ?>

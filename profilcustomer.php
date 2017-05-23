@@ -134,12 +134,7 @@
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
                               <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['aboutme'] ?></li>
                            </ul>
-<<<<<<< HEAD
-                           <center> <button onclick="window.location.href='update1.php'">Change</button>
-
-=======
                            <center> <input type="button" value="Change" onclick="window.location.href='edit1.php';">
->>>>>>> origin/master
                         </div>
                      </div>
                   </div>

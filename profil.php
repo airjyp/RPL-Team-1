@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<?php
+	include 'db_connect.php';
+	session_start();
+?>
 <title>Profile Vendor</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,17 +47,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<li>
-			<a class="page-scroll" href="index.php#page-top">Home</a>
+			<a class="page-scroll" href="#page-top">Home</a>
 			</li>
 			<li>
-			<a class="page-scroll" href=index.php"#about">About</a>
+			<a class="page-scroll" href="#about">About</a>
 			</li>
 			<li>
-			<a class="page-scroll" href=index.php"#services">Services</a>
+			<a class="page-scroll" href="#services">Services</a>
 			</li>
+			<?php
+			if(!empty($_SESSION['status'])) {
+			?>
+			<li> <a href="profilcustomer.php">Profile</a> </li>
+			<li> <a href="login/logoutproses.php">Logout</a> </li>
+			<?php } else {
+			 ?>
 			<li>
-			<a href="login/logoutproses.php">Log Out</a>
+			<a class="page-scroll" href="#testimonials">Testimony</a>
 			</li>
+			<?php } ?>
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->

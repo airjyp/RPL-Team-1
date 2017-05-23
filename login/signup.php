@@ -148,11 +148,11 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-6 form-group">
+							<div class="col-sm-12 form-group">
 								<label>Username</label>
 								<input type="text" name="username_cust" placeholder="Username" required minlength="6" class="form-control">
 							</div>
-							<div class="col-sm-6 form-group">
+							<div class="col-sm-12 form-group">
 								<label>Password</label>
 								<input type="text" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
 							</div>
@@ -188,11 +188,11 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-6 form-group">
+							<div class="col-sm-12 form-group">
 								<label>Username</label>
 								<input type="text" name="username_cust" placeholder="Username" required minlength="6" class="form-control">
 							</div>
-							<div class="col-sm-6 form-group">
+							<div class="col-sm-12 form-group">
 								<label>Password</label>
 								<input type="text" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
 							</div>

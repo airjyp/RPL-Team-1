@@ -90,7 +90,7 @@
                      <div class="col-lg-12">
                         <div class="col-xs-12 col-sm-4">
                            <figure>
-                              <img class="img-circle img-responsive" alt="" src="img/testi1.jpg">
+                              <img class="img-circle img-responsive" alt="" src='images/".$data['avatar']."'>
                            </figure>
                            <div class="row">
                               <div class="col-xs-12 social-btns">
@@ -134,8 +134,12 @@
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
                               <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['aboutme'] ?></li>
                            </ul>
+<<<<<<< HEAD
                            <center> <button onclick="window.location.href='update1.php'">Change</button>
 
+=======
+                           <center> <input type="button" value="Change" onclick="window.location.href='edit1.php';">
+>>>>>>> origin/master
                         </div>
                      </div>
                   </div>

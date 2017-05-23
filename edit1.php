@@ -14,6 +14,7 @@ $email_cust = $data['email_cust'];
 $aboutme = $data['aboutme'];
 $address_cust = $data['address_cust'];
 $birthdate = $data['birthdate'];
+$avatar = $data['avatar'];
 
 ?>
 
@@ -58,9 +59,13 @@ $birthdate = $data['birthdate'];
 					<td>About me</td>
 					<td><input type="text" name="aboutme"  value= "<?php echo $aboutme?>"/> </td>
 				</tr>
+        <tr>
+          <td>Avatar</td>
+          <td><input type="file" name="avatar" value= "<?php echo $avatar?>"/> </td>
+        </tr>
 				<tr>
 					<input type="hidden" name="id_cust" value="<?php echo $data['id_cust']?>"/>
-					<td><input type="submit" value="comment"></td>
+					<td><input type="submit" value="Change"></td>
 				</tr>
 			</table>
 		</form>

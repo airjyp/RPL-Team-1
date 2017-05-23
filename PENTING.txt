@@ -1,0 +1,10 @@
+-bagian EDIT dan proses editnya sudah bisa, tapi masih belum untuk upload avatar
+-bagian profilcustomer yang harus diubah adalah fotonya 
+
+intinya untuk yang kurang saat ini: #tolong ditambah
+1. upload avatar
+2.
+3.
+4.
+
+

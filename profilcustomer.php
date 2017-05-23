@@ -90,7 +90,7 @@
                      <div class="col-lg-12">
                         <div class="col-xs-12 col-sm-4">
                            <figure>
-                              <img class="img-circle img-responsive" alt="" src="img/testi1.jpg">
+                              <img class="img-circle img-responsive" alt="" src='images/".$data['avatar']."'>
                            </figure>
                            <div class="row">
                               <div class="col-xs-12 social-btns">

@@ -8,7 +8,7 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="login/signup1.css" rel="stylesheet" type="text/css" media="all" />
+<link href="login/css/signup1.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
 <!-- web font -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
@@ -123,7 +123,7 @@
 	<div class="login-form">
 	<div class="sap_tabs w3ls-tabs">
 	<div class="row">
-			<div class="sap_tabs w3ls-tabs">
+			<div>
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list">
 						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Customer</span></li>

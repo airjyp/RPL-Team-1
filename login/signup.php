@@ -236,7 +236,7 @@ if(!empty($_SESSION['status'])) {?>
 	<!-- //main -->
 <br>
 <!-- Section Footer
-==================================================
+==================================================-->
 <section class="bg-dark">
 <div class="container">
 <div class="row">
@@ -252,7 +252,7 @@ if(!empty($_SESSION['status'])) {?>
 	<div class="copyright">
 		<p> <br> <center> All rights reserved | Created by <a href="http://sinduwinarta.id/" target="_blank">MIPA (Memed, Ihda, Pam, AIR)</center></a></p>
 	</div>
-	-->
+
 	<!-- //copyright -->
 </div>
 </div>

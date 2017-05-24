@@ -92,8 +92,6 @@
                            <figure>
                               <img class="img-circle img-responsive" alt="" src= <?php echo $data['avatar'] ?> >
                            </figure>
-
-
                            <div class="row">
                               <div class="col-xs-12 social-btns">
                                  <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
@@ -130,18 +128,22 @@
                               <h1><?php echo ' ', $data['username_cust'] ?>'s profile </h1>
 
                               <li class="list-group-item">Name    : <br><i class="fa fa-user"></i><?php echo ' ', $data['fname_cust'],' ', $data['lname_cust'] ?></li>
-                              <li class="list-group-item">My birthday    : <br><i class="fa fa-home"></i><?php echo ' ', $data['birthdate'] ?></li>
+                              <li class="list-group-item">My birthday    : <br><i class="fa fa-spinner"></i><?php echo ' ', $data['birthdate'] ?></li>
                               <li class="list-group-item">Address    : <br><i class="fa fa-home"></i><?php echo ' ', $data['address_cust'] ?></li>
                               <li class="list-group-item">Telephone number    : <br><i class="fa fa-phone"></i> <?php echo ' ', $data['telephone_cust'] ?> </li>
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
-                              <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['aboutme'] ?></li>
+                              <li class="list-group-item">About me    : <br><i class="fa fa-comment"></i><?php echo ' ', $data['aboutme'] ?></li>
                            </ul>
-                          <center><td><button onclick="window.location.href='edit1.php';" class="submit btn btn-primary btn-xl">Change</button></td>
+                           <center> <input type="button" value="Change" onclick="window.location.href='edit1.php';">
                         </div>
                      </div>
                   </div>
                </div>
-
+               <div class="bs-callout bs-callout-danger">
+                  <p><center>
+                    Welcome to My Profile
+                  </center></p>
+            </div>
          </div>
         <!-- resume -->
 

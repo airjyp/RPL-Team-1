@@ -136,7 +136,7 @@ if(!empty($_SESSION['status'])) {?>
 							</div>
 							<div class="col-sm-12 form-group">
 								<label>Password</label>
-								<input type="text" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
+								<input type="password" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
 							</div>
 						</div>
 					<div class="form-group">

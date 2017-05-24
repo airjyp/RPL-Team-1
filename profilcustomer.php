@@ -90,10 +90,10 @@
                      <div class="col-lg-12">
                         <div class="col-xs-12 col-sm-4">
                            <figure>
-                              <img class="img-circle img-responsive" alt="" src='images/".$data['avatar']."'>
+                              <img class="img-circle img-responsive" alt="" src= <?php echo $data['avatar'] ?> >
                            </figure>
 
-													 	<center> <input type="button" value="Edit Avatar" onclick="window.location.href='editavatar.php';">
+
                            <div class="row">
                               <div class="col-xs-12 social-btns">
                                  <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
@@ -136,18 +136,12 @@
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <?php echo $data['email_cust'] ?></li>
                               <li class="list-group-item">About me    : <br><i class="fa fa-home"></i><?php echo ' ', $data['aboutme'] ?></li>
                            </ul>
-                           <center> <input type="button" value="Change" onclick="window.location.href='edit1.php';">
+                          <center><td><button onclick="window.location.href='edit1.php';" class="submit btn btn-primary btn-xl">Change</button></td>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="bs-callout bs-callout-danger">
-                  <h4><center>Summary</center></h4>
-                  <p><center>
-                     Lorem ipsum dolor sit amet, ea vel prima adhuc, scripta liberavisse ea quo, te vel vidit mollis complectitur. Quis verear mel ne. Munere vituperata vis cu,
-                     te pri duis timeam scaevola, nam postea diceret ne. Cum ex quod aliquip mediocritatem, mei habemus persecuti mediocritatem ei.
-                  </center></p>
-            </div>
+
          </div>
         <!-- resume -->
 

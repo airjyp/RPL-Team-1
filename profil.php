@@ -47,13 +47,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<li>
-			<a class="page-scroll" href="#page-top">Home</a>
+			<a class="page-scroll" href="index.php#page-top">Home</a>
 			</li>
 			<li>
-			<a class="page-scroll" href="#about">About</a>
+			<a class="page-scroll" href="index.php#about">About</a>
 			</li>
 			<li>
-			<a class="page-scroll" href="#services">Services</a>
+			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
 			<?php
 			if(!empty($_SESSION['status'])) {
@@ -63,7 +63,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			<?php } else {
 			 ?>
 			<li>
-			<a class="page-scroll" href="#testimonials">Testimony</a>
+			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
 			</li>
 			<?php } ?>
 		</ul>
@@ -361,17 +361,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
 
 
-<!-- Section Footer
-================================================== -->
-<section class="bg-dark">
-<div class="container">
-<div class="row">
-	<div class="col-md-10 text-center" style="margin:0 -16px">
-		<h1 class="bottombrand wow flipInX">Lavender</h1>
-		<p>
-			a low priced event organizer
-		</p>
-	</div>
+	<!-- Section Footer
+	================================================== -->
+	<section class="bg-dark">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1 class="bottombrand wow flipInX">Lavender</h1>
+			<p>
+				a low priced event organizer
+			</p>
+		</div>
+		<div class="copyright">
+			<p> <center> All rights reserved | Created by <a href="http://sinduwinarta.id/" target="_blank">MIPA (Memed, Ihda, Pam, AIR)</center></a></p>
+		</div>
+		<!-- //copyright -->
 	<br>
 	<br>
 </div>

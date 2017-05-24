@@ -60,32 +60,6 @@ if(!empty($_SESSION['status'])) {?>
 		</button>
 		<a class="navbar-brand page-scroll" href="../index.php"><img src="images/logo.png" alt="logolayana"></a>
 	</div>
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-			<a class="page-scroll" href="#page-top">Home</a>
-			</li>
-			<li>
-			<a class="page-scroll" href="#about">About</a>
-			</li>
-			<li>
-			<a class="page-scroll" href="#services">Services</a>
-			</li>
-			<li>
-			<a class="page-scroll" href="#portfolio">Work</a>
-			</li>
-			<!-- Do not display this at the moment
-			<li>
-			<a class="page-scroll" href="#pricing">Pricing</a>
-			</li>
-			-->
-			<li>
-			<a class="page-scroll" href="#contact">Contact</a>
-			</li>
-		</ul>
-	</div>
-	<!-- /.navbar-collapse -->
 </div>
 <!-- /.container -->
 </nav>
@@ -234,26 +208,6 @@ if(!empty($_SESSION['status'])) {?>
 		</div>
 	</div>
 	<!-- //main -->
-<br>
-<!-- Section Footer
-==================================================-->
-<section class="bg-dark">
-<div class="container">
-<div class="row">
-	<div class="col-md-12 text-center">
-		<h1 class="bottombrand wow flipInX">Lavender</h1>
-		<p>
-			a low priced event organizer
-		</p>
-	</div>
-	<br>
-	<br>
-
-	<div class="copyright">
-		<p> <br> <center> All rights reserved | Created by <a href="http://sinduwinarta.id/" target="_blank">MIPA (Memed, Ihda, Pam, AIR)</center></a></p>
-	</div>
-
-	<!-- //copyright -->
 </div>
 </div>
 </section>

@@ -8,7 +8,7 @@
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if($row) {
 		$_SESSION['id'] = $row['id_vendor'];
-		$_SESSION['status'] = "user";
+		$_SESSION['status'] = "vendor";
 		if($_SESSION['id'] == '1'){
 ?>
 			<script language="javascript">alert("Hello, Vendor!");</script>
@@ -18,7 +18,7 @@
 		else {
 ?>
 			<script language="javascript">alert("Logging Succesful");</script>
-			<script> document.location.href='../index.php';</script>
+			<script> document.location.href='../profil.php';</script>
 <?php
 		}
 	}

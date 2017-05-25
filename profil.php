@@ -46,6 +46,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
+			<?php
+			!empty($_SESSION['status']);
+			if($_SESSION['status']=="vendor")  {
+				?>
+			<li>
+			<a class="#" href="#">Notification</a>
+			</li>
+			<li>
+			<a href="login/logoutproses.php">Logout</a>
+			</li>
+		<?php } else if($_SESSION['status']=="user") {
+		?>
 			<li>
 			<a class="page-scroll" href="index.php#page-top">Home</a>
 			</li>
@@ -55,17 +67,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			<li>
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
-			<?php
-			if(!empty($_SESSION['status'])) {
-			?>
-			<li> <a href="profilcustomer.php">Profile</a> </li>
-			<li> <a href="login/logoutproses.php">Logout</a> </li>
+			<li>
+			<a href="profilcustomer.php">Profile</a>
+			</li>
+			<li>
+			<a href="login/logoutproses.php">Logout</a>
+			</li>
 			<?php } else {
-			 ?>
+		 ?>
+ 			<li>
+ 			<a class="page-scroll" href="index.php#page-top">Home</a>
+ 			</li>
+ 			<li>
+ 			<a class="page-scroll" href="index.php#about">About</a>
+ 			</li>
+ 			<li>
+ 			<a class="page-scroll" href="index.php#services">Services</a>
+ 			</li>
 			<li>
 			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
 			</li>
-			<?php } ?>
+			<?php } 
+		 ?>
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->

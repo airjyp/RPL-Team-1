@@ -3,6 +3,8 @@
 <?php
 	include 'db_connect.php';
 	session_start();
+	if(empty($_SESSION['status']))
+	{ $_SESSION['status']="nouser"; }
 ?>
 <head>
 <meta charset="utf-8">
@@ -52,7 +54,7 @@
 			<a class="page-scroll" href="#services">Services</a>
 			</li>
 			<?php
-			if(!empty($_SESSION['status'])) {
+			if($_SESSION['status']=="user") {
 			?>
 			<li> <a href="profilcustomer.php">Profile</a> </li>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
@@ -88,7 +90,7 @@
 				<h1 data-animation="animated bounceInUp">
 				Lavender </h1>
 				<?php
-				if(!empty($_SESSION['status'])) {
+				if($_SESSION['status']=="user") {
 					?>
 			<a href="#services" class="btn btn-primary btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }
@@ -107,7 +109,7 @@
 				<h1 data-animation="animated zoomInRight">
 				event organizer </h1>
 				<?php
-				if(!empty($_SESSION['status'])) {
+				if($_SESSION['status']=="user"){
 					?>
 					<a href="#services" class="btn btn-ghost btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }
@@ -126,7 +128,7 @@
 				<h1 data-animation="animated bounceInRight">
 				special event</h1>
 				<?php
-				if(!empty($_SESSION['status'])) {
+				if($_SESSION['status']=="user"){
 					?>
 			<a href="#services" class="btn btn-primary btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }

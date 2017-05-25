@@ -14,5 +14,7 @@ if($connect->connect_error) {
 } else {
 	// echo "Successfully Connected";
 }
-
+if(!(isset($_SESSION['status']))) {
+	$_SESSION['status'] = "nouser";
+}
 ?>

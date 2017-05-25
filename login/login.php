@@ -3,8 +3,16 @@
 <?php
 	include 'db_connect.php';
 	session_start();
-	if(!empty($_SESSION['status'])) {?>
+	if(empty($_SESSION['status']))
+	{ $_SESSION['status']="nouser"; }
+//Kondisi kalo sudah login
+		else if($_SESSION['status']=="user"){
+		 ?>
 		<script>document.location.href="../profilcustomer.php";</script>
+	<?php }
+	else if($_SESSION['status']=="vendor"){
+		?>
+		<script>document.location.href="../profil.php";</script>
 	<?php }
 ?>
 <head>
@@ -92,6 +100,7 @@
 					</ul>
 					<div class="clear"> </div>
 					<div class="resp-tabs-container">
+<!--Login customer-->
 						<div class="tab-0 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="login-agileits-top">
 								<form action="proseslogin1.php" method="post">
@@ -112,6 +121,7 @@
 								<p><a href="#">Forgot password?</a></p>
 							</div>
 						</div>
+<!--Login Vendor-->
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 							<div class="login-agileits-top">
 								<form action="proseslogin2.php" method="post">

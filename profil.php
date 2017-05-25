@@ -3,6 +3,8 @@
 <?php
 	include 'db_connect.php';
 	session_start();
+	if(empty($_SESSION['status']))
+	{ $_SESSION['status']="nouser"; }
 ?>
 <title>Profile Vendor</title>
 <meta charset="utf-8">
@@ -47,7 +49,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<?php
-			!empty($_SESSION['status']);
 			if($_SESSION['status']=="vendor")  {
 				?>
 			<li>
@@ -87,7 +88,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			<li>
 			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
 			</li>
-			<?php } 
+			<?php }
 		 ?>
 		</ul>
 	</div>

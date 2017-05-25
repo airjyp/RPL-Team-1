@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include "db_connect.php";
-session_start();
-if(empty($_SESSION['status'])) {?>
-  <script>document.location.href="login/login.php";</script>
-<?php }
-
-if(!empty($_SESSION['status'])){
+  include "db_connect.php";
+  session_start();
+  if(unset($_SESSION['status']))
+  { ?>
+    <script>document.location.href="index.php";</script>
+  <?php }
+else if($_SESSION['status']=="user"){
    $id = $_SESSION['id'];
    $query = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust = '$id'");
    $data= mysqli_fetch_array($query);
@@ -70,21 +70,10 @@ $avatar = $data['avatar'];
 			<li>
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
-			<?php
-			if(!empty($_SESSION['status'])) {
-			?>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
-			<?php } else {
-			 ?>
-			<li>
-			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
-			</li>
-			<?php } } ?>
+			<?php } ?>
 		</ul>
 	</div>
-
-
-
 	<!-- /.navbar-collapse -->
 </div>
 <!-- /.container -->

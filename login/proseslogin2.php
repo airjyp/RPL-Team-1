@@ -1,6 +1,6 @@
 <?php
 	include 'db_connect.php';
-
+	session_start();
 	$username_vendor = $_POST['username_vendor'];
 	$password_vendor = $_POST['password_vendor'];
 

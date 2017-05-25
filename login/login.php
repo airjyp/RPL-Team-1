@@ -114,11 +114,11 @@
 						</div>
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 							<div class="login-agileits-top">
-								<form action="#" method="post">
+								<form action="proseslogin2.php" method="post">
 									<p>User Name </p>
-									<input type="text" name="User Name" required=""/>
+									<input type="text" name="username_vendor" required=""/>
 									<p>Password</p>
-									<input type="password" name="Password" required=""/>
+									<input type="password" name="password_vendor" required=""/>
 									<input type="checkbox" id="brand" value="">
 									<label for="brand"><span></span> Remember me ?</label>
 									<input type="submit" value="LOGIN">

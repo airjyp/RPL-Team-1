@@ -5,6 +5,10 @@
 	session_start();
 	if(empty($_SESSION['status']))
 	{ $_SESSION['status']="nouser"; }
+else if($_SESSION['status']=="vendor"){
+	?>
+	<script>document.location.href="profil.php";</script>
+<?php }
 ?>
 <head>
 <meta charset="utf-8">

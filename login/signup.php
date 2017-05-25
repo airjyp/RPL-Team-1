@@ -162,30 +162,30 @@ if(!empty($_SESSION['status'])) {?>
 						<div class="row">
 							<div class="col-sm-6 form-group">
 								<label>First Name</label>
-								<input type="text" name="fname_cust" placeholder="Your first name" required minlength="3" class="form-control">
+								<input type="text" name="fname_vendor" placeholder="Your first name" required minlength="3" class="form-control">
 							</div>
 							<div class="col-sm-6 form-group">
 								<label>Last Name</label>
-								<input type="text" name="lname_cust" placeholder="Last Name - Optional" class="form-control">
+								<input type="text" name="lname_vendor" placeholder="Last Name - Optional" class="form-control">
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-12 form-group">
 								<label>Username</label>
-								<input type="text" name="username_cust" placeholder="Username" required minlength="6" class="form-control">
+								<input type="text" name="username_vendor" placeholder="Username" required minlength="6" class="form-control">
 							</div>
 							<div class="col-sm-12 form-group">
 								<label>Password</label>
-								<input type="text" name="password_cust" placeholder="Password" required minlength="8" class="form-control">
+								<input type="password" name="password_vendor" placeholder="Password" required minlength="8" class="form-control">
 							</div>
 						</div>
 					<div class="form-group">
 						<label>Telephone</label>
-						<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" class="form-control">
+						<input type="number" name="telephone_vendor" placeholder="Telephone" required minlength="10" class="form-control">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="text" name="email_cust" placeholder="Email" required class="form-control">
+						<input type="text" name="email_vendor" placeholder="Email" required class="form-control">
 						<br>
 						<input type="submit" value="SIGNUP As Vendor">
 					</div>

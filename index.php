@@ -3,12 +3,6 @@
 <?php
 	include 'db_connect.php';
 	session_start();
-	if(empty($_SESSION['status']))
-	{ $_SESSION['status']="nouser"; }
-else if($_SESSION['status']=="vendor"){
-	?>
-	<script>document.location.href="profil.php";</script>
-<?php }
 ?>
 <head>
 <meta charset="utf-8">
@@ -58,7 +52,7 @@ else if($_SESSION['status']=="vendor"){
 			<a class="page-scroll" href="#services">Services</a>
 			</li>
 			<?php
-			if($_SESSION['status']=="user") {
+			if(!empty($_SESSION['status'])) {
 			?>
 			<li> <a href="profilcustomer.php">Profile</a> </li>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
@@ -94,7 +88,7 @@ else if($_SESSION['status']=="vendor"){
 				<h1 data-animation="animated bounceInUp">
 				Lavender </h1>
 				<?php
-				if($_SESSION['status']=="user") {
+				if(!empty($_SESSION['status'])) {
 					?>
 			<a href="#services" class="btn btn-primary btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }
@@ -113,7 +107,7 @@ else if($_SESSION['status']=="vendor"){
 				<h1 data-animation="animated zoomInRight">
 				event organizer </h1>
 				<?php
-				if($_SESSION['status']=="user"){
+				if(!empty($_SESSION['status'])) {
 					?>
 					<a href="#services" class="btn btn-ghost btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }
@@ -132,7 +126,7 @@ else if($_SESSION['status']=="vendor"){
 				<h1 data-animation="animated bounceInRight">
 				special event</h1>
 				<?php
-				if($_SESSION['status']=="user"){
+				if(!empty($_SESSION['status'])) {
 					?>
 			<a href="#services" class="btn btn-primary btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }

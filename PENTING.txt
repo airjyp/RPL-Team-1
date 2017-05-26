@@ -2,10 +2,14 @@
 -bagian profilcustomer yang harus diubah adalah fotonya 
 
 intinya untuk yang kurang saat ini: #tolong ditambah
-1. upload avatar
+1. vendor  
 2.
 3.
 4.
 
+***Semua sesi vendor di INDEX, PROFILCUSTOMER, EDIT, LOGIN gue apus soalnya belom bener, jadi nyasar. Coba bikin ulang ya.
+
+yang udah:
+1. upload avatar
 
 http://itx.web.id/php/tutorial-upload-menyimpan-dan-menampilkan-gambar-dengan-php-dan-mysql/

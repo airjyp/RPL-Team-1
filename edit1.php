@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-  include "db_connect.php";
-  session_start();
-  if(unset($_SESSION['status']))
-  { ?>
-    <script>document.location.href="index.php";</script>
-  <?php }
-else if($_SESSION['status']=="user"){
+include "db_connect.php";
+session_start();
+if(empty($_SESSION['status'])) {?>
+  <script>document.location.href="login/login.php";</script>
+<?php }
+
+if(!empty($_SESSION['status'])){
    $id = $_SESSION['id'];
    $query = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust = '$id'");
    $data= mysqli_fetch_array($query);
@@ -70,10 +70,21 @@ $avatar = $data['avatar'];
 			<li>
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
+			<?php
+			if(!empty($_SESSION['status'])) {
+			?>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
-			<?php } ?>
+			<?php } else {
+			 ?>
+			<li>
+			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
+			</li>
+			<?php } } ?>
 		</ul>
 	</div>
+
+
+
 	<!-- /.navbar-collapse -->
 </div>
 <!-- /.container -->
@@ -87,10 +98,17 @@ $avatar = $data['avatar'];
                      <div class="col-lg-12">
                         <div class="col-xs-12 col-sm-4">
                            <figure>
-                              <img class="img-circle img-responsive" alt="" src='images/".$data['avatar']."'>
-                              <input type="file" name="avatar" value= "<?php echo $avatar?>"/>
+
+                              <img class="img-circle img-responsive" alt="" src=<?php echo $data['avatar'] ?>>
+                              <form name="uploader" action="updateavatar.php" method="POST" enctype="multipart/form-data">
+
+                  <input type="file" name="avatar">
+
+                  <button type="submit">Upload</button>
+              </form>
                            </figure>
-			        <center> <input type="button" value="Edit Avatar" onclick="window.location.href='editavatar.php';">
+
+
                            <div class="row">
                               <div class="col-xs-12 social-btns">
                                  <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
@@ -143,7 +161,6 @@ $avatar = $data['avatar'];
                </div>
                <div class="bs-callout bs-callout-danger">
                   <p><center>
-                     Edit ya profilnya, siapa tau ketemu jodoh
                   </center></p>
             </div>
          </div>
@@ -181,4 +198,8 @@ $avatar = $data['avatar'];
 <script src="js/wow.min.js"></script>
 <script src="js/common.js"></script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> eae73ea5a720fac7cfa7211c032cd401a7ec5d48

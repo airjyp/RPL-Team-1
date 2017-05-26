@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 	include 'db_connect.php';
    session_start();
-	if(empty($_SESSION['status'])) {?>
+	if(empty($_SESSION['status'])) {
+
+		?>
 		<script language="javascript">alert("Please Login First");</script>
 		<script>document.location.href="login/login.php";</script>
-	<?php }
+
+		<?php
+	 }
    else {
+
    if(!empty($_SESSION['status'])){
       $id = $_SESSION['id'];
       $query = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust = '$id'");
@@ -15,6 +18,9 @@
 
 ?>
 
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +77,7 @@
 			<li>
 			<a class="page-scroll" href="index.php#testimonials">Testimony</a>
 			</li>
-			<?php } } } ?>
+			<?php } ?>
 		</ul>
 	</div>
 
@@ -180,3 +186,6 @@
 <script src="js/common.js"></script>
 </body>
 </html>
+ <?php
+} }
+?>

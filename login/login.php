@@ -116,7 +116,7 @@
 								</form>
 							</div>
 							<div class="login-agileits-bottom">
-								<p><a href="#">Forgot password?</a></p>
+								<p><a href="../forgot.php">Forgot password?</a></p>
 							</div>
 						</div>
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">

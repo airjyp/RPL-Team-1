@@ -26,7 +26,7 @@ if($_POST) {
     }
 
     else {
-	$sql = "INSERT INTO vendor (id_vendor, fname_vendor, lname_vendor, telephone_vendor, email_vendor, address_vendor, id_category, amount, username_vendor, password_vendor, active, avatar) VALUES ('', '$fname_vendor', '$lname_vendor', '$telephone_vendor', '$email_vendor', '', '', '', '$username_vendor', '$password_vendor' ,1, '') ";
+	$sql = "INSERT INTO vendor (id_vendor, fname_vendor, lname_vendor, telephone_vendor, email_vendor, address_vendor, id_category, amount, username_vendor, password_vendor, active, avatar) VALUES ('', '$fname_vendor', '$lname_vendor', '$telephone_vendor', '$email_vendor', '', '', '', '$username_vendor', '$password_vendor' ,2, '') ";
 	if($connect->query($sql) === TRUE) {
 		?>
 

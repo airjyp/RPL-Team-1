@@ -2,7 +2,6 @@
 <html lang="en">
 <?php
 	include 'db_connect.php';
-	session_start();
 ?>
 <head>
 <meta charset="utf-8">

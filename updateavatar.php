@@ -1,6 +1,6 @@
 <?php
 	include "db_connect.php";
-  session_start();
+
 	if($_SESSION['status'] == 'user') {
 		$id = $_SESSION['id'];
 		$folder = "images";

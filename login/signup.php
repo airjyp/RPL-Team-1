@@ -1,11 +1,11 @@
 <?php
 include 'db_connect.php';
 session_start();
-if(empty($_SESSION['status']))
-{ $_SESSION['status']="nouser"; }
-else if($_SESSION['status']=="user") {?>
+if(empty($_SESSION['active']))
+{ $_SESSION['active']="nouser"; }
+else if($_SESSION['active']==1) {?>
 	<script>document.location.href="../profilcustomer.php";</script>
-<?php } else if($_SESSION['status']=="vendor"){
+<?php } else if($_SESSION['active']==2){
 ?>
 <script>document.location.href="../profil.php";</script>
 <?php } ?>

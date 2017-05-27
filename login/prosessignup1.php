@@ -7,7 +7,7 @@ if($_POST) {
 	$telephone_cust = $_POST['telephone_cust'];
 	$email_cust = $_POST['email_cust'];
 	$username_cust = $_POST['username_cust'];
-	$password_cust = $_POST['password_cust'];
+	$password_cust = base64_encode($_POST['password_cust']);
 	$usercheck = mysqli_query($connect,"SELECT * FROM customer WHERE username_cust = '$username_cust'");
 	$emailcheck = mysqli_query($connect,"SELECT * FROM customer WHERE email_cust = '$email_cust'");
 	if(mysqli_num_rows($usercheck) > 0 ){

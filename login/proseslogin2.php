@@ -2,7 +2,7 @@
 	include 'db_connect.php';
 
 	$username_vendor = $_POST['username_vendor'];
-	$password_vendor = $_POST['password_vendor'];
+	$password_vendor = base64_encode($_POST['password_vendor']);
 
 	$result = mysqli_query($connect, "SELECT * FROM vendor WHERE username_vendor='$username_vendor' and password_vendor='$password_vendor'");
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -28,5 +28,5 @@
 		<script>document.location.href='../login/login.php';</script>
 <?php
 	}
-	mysqli_close($conn);
+	mysqli_close($connect);
 ?>

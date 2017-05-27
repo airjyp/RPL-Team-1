@@ -1,7 +1,7 @@
 <?php
 	include 'db_connect.php';
 	$username_cust = $_POST['username_cust'];
-	$password_cust = $_POST['password_cust'];
+	$password_cust = base64_encode($_POST['password_cust']);
 
 	$result = mysqli_query($connect, "SELECT * FROM customer WHERE username_cust='$username_cust' and password_cust='$password_cust'");
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -27,5 +27,5 @@
 		<script>document.location.href='login.php';</script>
 <?php
 	}
-	mysqli_close($conn);
+	mysqli_close($connect);
 ?>

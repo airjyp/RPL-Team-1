@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
 <?php
 	include 'db_connect.php';
-	session_start();
-	if(!empty($_SESSION['status'])) {?>
+	if(!empty($_SESSION['active'])) {
+		if($_SESSION['active']==1){
+		?>
 		<script>document.location.href="../profilcustomer.php";</script>
 	<?php }
+		elseif($_SESSION['active']==2){
+		?>
+		<script>document.location.href="../profil.php";</script>
+	<?php }
+}
 ?>
+<!DOCTYPE html>
+<html>
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

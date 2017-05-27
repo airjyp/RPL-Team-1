@@ -1,6 +1,6 @@
 <?php
 	include 'db_connect.php';
-	session_start();
+
 	$username_vendor = $_POST['username_vendor'];
 	$password_vendor = $_POST['password_vendor'];
 
@@ -8,7 +8,7 @@
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if($row) {
 		$_SESSION['id'] = $row['id_vendor'];
-		$_SESSION['status'] = "vendor";
+		$_SESSION['active'] = 2;
 		if($_SESSION['id'] == '1'){
 ?>
 			<script language="javascript">alert("Hello, Vendor!");</script>

@@ -51,7 +51,7 @@
 			<a class="page-scroll" href="#services">Services</a>
 			</li>
 			<?php
-			if(!empty($_SESSION['status'])) {
+			if(!empty($_SESSION['active'])) {
 			?>
 			<li> <a href="profilcustomer.php">Profile</a> </li>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
@@ -87,7 +87,7 @@
 				<h1 data-animation="animated bounceInUp">
 				Lavender </h1>
 				<?php
-				if(!empty($_SESSION['status'])) {
+				if(!empty($_SESSION['active'])) {
 					?>
 			<a href="#services" class="btn btn-primary btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }
@@ -106,7 +106,7 @@
 				<h1 data-animation="animated zoomInRight">
 				event organizer </h1>
 				<?php
-				if(!empty($_SESSION['status'])) {
+				if(!empty($_SESSION['active'])) {
 					?>
 					<a href="#services" class="btn btn-ghost btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }
@@ -125,7 +125,7 @@
 				<h1 data-animation="animated bounceInRight">
 				special event</h1>
 				<?php
-				if(!empty($_SESSION['status'])) {
+				if(!empty($_SESSION['active'])) {
 					?>
 			<a href="#services" class="btn btn-primary btn-lg ; page-scroll" data-animation="animated fadeInDown">Start Looking</a>
 				<?php }

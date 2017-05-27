@@ -1,11 +1,21 @@
+<?php
+include 'db_connect.php';
+if(empty($_SESSION['active'])) {
+	?>
+	<script language="javascript">alert("Please Login First");</script>
+	<script>document.location.href="login/login.php";</script>
+
+	<?php
+ }
+ else {
+ if($_SESSION['active']==2){
+		$id = $_SESSION['id'];
+		$query = mysqli_query($connect, "SELECT * FROM vendor WHERE id_vendor = '$id'");
+		$data= mysqli_fetch_array($query);
+
+?>
 <!DOCTYPE html>
 <html>
-<?php
-	include 'db_connect.php';
-	session_start();
-	if(empty($_SESSION['status']))
-	{ $_SESSION['status']="nouser"; }
-?>
 <title>Profile Vendor</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +59,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<?php
-			if($_SESSION['status']=="vendor")  {
+			if($_SESSION['active']==2)  {
 				?>
 			<li>
 			<a class="#" href="#">Notification</a>
@@ -57,7 +67,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			<li>
 			<a href="login/logoutproses.php">Logout</a>
 			</li>
-		<?php } else if($_SESSION['status']=="user") {
+		<?php } else if($_SESSION['active']==2) {
 		?>
 			<li>
 			<a class="page-scroll" href="index.php#page-top">Home</a>
@@ -422,3 +432,7 @@ function w3_close() {
 
 </body>
 </html>
+
+<?php
+} }
+ ?>

@@ -1,6 +1,5 @@
 <?php
 	include 'db_connect.php';
-	session_start();
 	$username_cust = $_POST['username_cust'];
 	$password_cust = $_POST['password_cust'];
 
@@ -8,7 +7,7 @@
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if($row) {
 		$_SESSION['id'] = $row['id_cust'];
-		$_SESSION['status'] = "user";
+		$_SESSION['active'] =1;
 		if($_SESSION['id'] == '1'){
 ?>
 			<script language="javascript">alert("Hello, Customer!");</script>

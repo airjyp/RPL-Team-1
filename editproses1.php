@@ -1,8 +1,6 @@
 <?php
 
 include 'db_connect.php';
-session_start();
-
 if($_POST) {
 	$id_cust = $_POST['id_cust'];
   $fname_cust = $_POST['fname_cust'];

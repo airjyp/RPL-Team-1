@@ -1,8 +1,6 @@
 <?php
 	include 'db_connect.php';
-   session_start();
-	if(empty($_SESSION['status'])) {
-
+	if(empty($_SESSION['active'])) {
 		?>
 		<script language="javascript">alert("Please Login First");</script>
 		<script>document.location.href="login/login.php";</script>
@@ -10,8 +8,7 @@
 		<?php
 	 }
    else {
-
-   if(!empty($_SESSION['status'])){
+   if($_SESSION['active']==1){
       $id = $_SESSION['id'];
       $query = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust = '$id'");
       $data= mysqli_fetch_array($query);
@@ -69,7 +66,7 @@
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
 			<?php
-			if(!empty($_SESSION['status'])) {
+			if(!empty($_SESSION['active'])) {
 			?>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
 			<?php } else {

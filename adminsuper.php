@@ -54,25 +54,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			<li>
 			<a class="page-scroll" href="#services">Services</a>
 			</li>
-			<?php
-				if($_SESSION['status'] == "user"){
-			?>
+			
 			<li>
 			<a href="#">Profile</a>
 			</li>
 			<li>
 			<a href="login/logoutproses.php">Log Out</a>
 			</li>
-			<?php
-		}
-			else{
-			?>
+
 			<li>
 			<a class="page-scroll" href="#testimonials">Testimony</a>
 			</li>
-			<?php
-				}
-			?>
+			
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->
@@ -95,7 +88,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
 	<center><hr class="garisitem"></center>
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>DASHBOARD</a> 
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>DASHBOARD</a> 
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>CUSTOMER</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw w3-margin-right"></i>VENDOR</a>
   </div>
@@ -123,6 +116,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			
       <div class="w3-row-padding">
         <center>
+				<center><hr class="garisitem"></center>
 				<h1 id="portfolio"><b><center>S U P E R - A D M I N </center></b></h1>
 				<h2 class="lobster">Dashboard</h2>
 				<h6 class="righteous">General Information</h6>
@@ -134,26 +128,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 					<div class="col s4">
 						<div class="cmember"><br>
 							<h2><i class="fa fa-users"></i></h2>
-							<h5>Total Member</h5>
-							<a href="INI DIISI TABEL CUSTOMER.php" style="color: #000;">
-								<h2>
+							<h5>Total Customer</h5>
+							<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="color: #000;">
+								<h1>
 								<?php
-									$query4 = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust != '1'");
+									$query4 = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust != '1' AND active = '1'");
 									$hitung = mysqli_num_rows($query4);
 									echo $hitung;
 								?> 
-							</h2></a><br>
+							</h1></a><br>
 						</div>
 					</div>
+
+
 					<div class="col s4">
 						<div class="cpost"><br>
 							<h2><i class="fa fa-user"></i></h2>
 							<h5>Total Vendor</h5>
-							<a href="INI DIIISI TABEL VENDOR.php" style="color: #000;"><h2>
+							<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="color: #000;"><h2>
 								<?php
-				 						$query5 = mysqli_query($connect, "SELECT * FROM vendor WHERE id_vendor != '1'");
-					 					$hitung2 = mysqli_num_rows($query4);
-					 					echo $hitung;
+				 						$query5 = mysqli_query($connect, "SELECT * FROM vendor WHERE active = '2'");
+					 					$hitung2 = mysqli_num_rows($query5);
+					 					echo $hitung2;
 				 				?>
 							</h2></a><br>
 						</div>
@@ -170,6 +166,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <br>
 <br>
 <br>
+<center>
 <div class="row" >
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="panel panel-default">
@@ -178,9 +175,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	</div>
 			<div class="panel-body">
           <div class="table-responsive">
-              <table class="table table-striped table-bordered table-hover w3-centered">
+              <table class="tablew3-centered">
                   <thead>
-<table border="1" cellspacing="0" cellpadding="6">
+<table border="1" cellspacing="5" cellpadding="6">
 		<thead>
 			<tr>
 				<th>ID Cust</th>
@@ -195,7 +192,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		</thead>
 		<tbody>
 			<?php
-			$sql = "SELECT * FROM customer WHERE active =1";
+			$sql = "SELECT * FROM customer WHERE active = 1";
 			$result = $connect->query($sql);
 			if($result-> num_rows > 0) {
 				while($row = $result-> fetch_assoc()) {
@@ -221,12 +218,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		</tbody>
 	</table>
 
-
 	</div>
 	</div>
 	</div>          
 	</div>
 	</div>
+	</center>
 
 
   <!-- Section VENDOR TABLE -->
@@ -234,17 +231,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <br>
 <br>
 <br>
+<center>
 <div class="row" >
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="panel panel-default">
 	<div class="panel-heading">
 	<center><h3 id="contact"><b>DAFTAR VENDOR</b></h3></center>
 	</div>
-			<div class="panel-body">
           <div class="table-responsive">
               <table class="table table-striped table-bordered table-hover w3-centered">
                   <thead>
-<table border="1" cellspacing="0" cellpadding="4">
+<table border="1" cellspacing="5" cellpadding="6">
 		<thead>
 			<tr>
 				<th>ID vendor</th>
@@ -261,7 +258,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		</thead>
 		<tbody>
 			<?php
-			$sql = "SELECT * FROM vendor WHERE active = 1 ";
+			$sql = "SELECT * FROM vendor WHERE active = 2";
 			$result = $connect->query($sql);
 			if($result-> num_rows > 0) {
 				while($row = $result-> fetch_assoc()) {
@@ -292,7 +289,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 </div>
 </div>
-</div>
+</center>
 
 
   	

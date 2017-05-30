@@ -1,5 +1,11 @@
 <?php
 	include 'db_connect.php';
+	if($_SESSION['id'] != "1"){
+		?>
+			<script language="javascript"> alert("You don't have permission to do this");</script>
+			<script> document.location.href='index.php'; </script>
+		<?php
+	}
 ?>
 
 <script language="javascript">alert("Welcome back MASTAH!!!");</script>
@@ -49,23 +55,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<li>
-			<a class="page-scroll" href="#page-top">Home</a>
-			</li>
-			<li>
-			<a class="page-scroll" href="#services">Services</a>
-			</li>
-			
-			<li>
-			<a href="#">Profile</a>
+			<a class="page-scroll" href="index.php">Home</a>
 			</li>
 			<li>
 			<a href="login/logoutproses.php">Log Out</a>
 			</li>
-
-			<li>
-			<a class="page-scroll" href="#testimonials">Testimony</a>
-			</li>
-			
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->

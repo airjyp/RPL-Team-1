@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <?php
 	include 'db_connect.php';
-	$id = $_SESSION['id'];
-	$quer = mysqli_query($connect, "SELECT * FROM vendor JOIN category WHERE id_category='$id'");
-	$dat = mysqli_fetch_array($quer);
+	session_start();
 ?>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title><?php echo $id;?> - Lavender</title>
+<title>Photography - Lavender</title>
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 <!-- Custom Fonts -->
@@ -53,9 +51,10 @@
 			<li>
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
-			<?php if(!empty($_SESSION['active']==1)) {
+			<?php
+			if(!empty($_SESSION['active']==1)) {
 			?>
-			<li> <a href="#">Profile</a> </li>
+			<li> <a href="profilcustomer.php">Profile</a> </li>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
 			<?php } else {
 			 ?>
@@ -87,7 +86,7 @@
 				<h2 data-animation="animated bounceInDown">
 				Welcome to </h2>
 				<h1 data-animation="animated bounceInUp">
-				<?php $dat['des_category2']; ?></h1>
+				Lavender's Photographer </h1>
 			</div>
 		</div>
 		<!-- /.item -->
@@ -124,7 +123,13 @@
 			<h2 class="section-heading">OUR <b>PHOTOGRAPHER</b></h2>
 			<hr>
 			<p>
-
+				 Capturing the "once in a life time" events, happy faces, smiles, happy tears have special meaning in our hearts
+			</p>
+			<p>
+				 Our clients are not just clients, but they become our good friends
+			</p>
+			<p>
+				 We always capture the best moment of their happiest days of their life
 			</p>
 	</div>
 </div>
@@ -134,6 +139,9 @@
 
 <!-- Section Team
 ================================================== -->
+<?php
+$sql = mysqli_query($connect,"SELECT * FROM vendor WHERE id_category=1");
+ ?>
 <section class="no-padding">
 <div class="col-md-4 bg-primary no-padding teambox">
 	<?php
@@ -173,7 +181,7 @@ echo "<h2><a href='profil1.php?id_vendor=".$data['id_vendor']."';>$result</a></h
 echo "<h2><a href='profil1.php?id_vendor=".$data['id_vendor']."';>$result</a></h2>";
 ?>
 <p>
-	 <?php echo $dat['name_category']; ?>
+	 PHOTOGRAPHY
 </p>
 </div>
 <div class="col-md-4 bg-primary no-padding teambox">

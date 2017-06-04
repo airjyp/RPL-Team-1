@@ -9,6 +9,10 @@
 		?>
 		<script>document.location.href="../profil.php";</script>
 	<?php }
+		elseif($_SESSION['active']==3){
+		?>
+		<script>document.location.href="../adminsuper.php";</script>
+	<?php }
 }
 ?>
 <!DOCTYPE html>
@@ -116,7 +120,6 @@
 								</form>
 							</div>
 							<div class="login-agileits-bottom">
-								<p><a href="./signup.php">Not have an account? Sign up here</a></p>
 								<p><a href="../forgot.php">Forgot password?</a></p>
 							</div>
 						</div>
@@ -133,7 +136,6 @@
 								</form>
 							</div>
 							<div class="login-agileits-bottom">
-									<p><a href="./signup.php">Not have an account? Sign up here</a></p>
 								<p><a href="#">Forgot password?</a></p>
 							</div>
 						</div>

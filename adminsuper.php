@@ -55,6 +55,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
 			<li>
+			<a class="page-scroll" href="index.php">Home</a>
+			</li>
+			<li>
 			<a href="login/logoutproses.php">Log Out</a>
 			</li>
 		</ul>
@@ -79,8 +82,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </div>
 	<center><hr class="garisitem"></center>
   <div class="w3-bar-block">
+<<<<<<< HEAD
     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>DASHBOARD</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>CUSTOMER</a>
+=======
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>DASHBOARD</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>CUSTOMER</a> 
+>>>>>>> origin/master
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw w3-margin-right"></i>VENDOR</a>
   </div>
 </nav>
@@ -104,7 +112,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </body>
 
   <div class="dashboard">
+<<<<<<< HEAD
 
+=======
+			
+>>>>>>> origin/master
       <div class="w3-row-padding">
         <center>
 				<center><hr class="garisitem"></center>
@@ -126,7 +138,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 									$query4 = mysqli_query($connect, "SELECT * FROM customer WHERE id_cust != '1' AND active = '1'");
 									$hitung = mysqli_num_rows($query4);
 									echo $hitung;
+<<<<<<< HEAD
 								?>
+=======
+								?> 
+>>>>>>> origin/master
 							</h1></a><br>
 						</div>
 					</div>
@@ -149,7 +165,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			<br></center>
     </div>
 	</div>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 	<center><hr class="garisitem"> </center>
 
 
@@ -211,7 +231,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 	</div>
 	</div>
+<<<<<<< HEAD
 	</div>
+=======
+	</div>          
+>>>>>>> origin/master
 	</div>
 	</div>
 	</center>
@@ -242,6 +266,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 				<th>Email</th>
 				<th>Address</th>
 				<th>ID Category</th>
+<<<<<<< HEAD
+=======
+				<th>Amount</th>
+>>>>>>> origin/master
 				<th>Username</th>
 				<th>Password</th>
 			</tr>
@@ -260,6 +288,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 						<td>".$row['email_vendor']."</td>
 						<td>".$row['address_vendor']."</td>
 						<td>".$row['id_category']."</td>
+<<<<<<< HEAD
+=======
+						<td>".$row['amount']."</td>
+>>>>>>> origin/master
 						<td>".$row['username_vendor']."</td>
 						<td>".$row['password_vendor']."</td>
 						<td>
@@ -281,7 +313,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </center>
 
 
+<<<<<<< HEAD
 
+=======
+  	
+>>>>>>> origin/master
 <!-- Section Footer
 ================================================== -->
 <section class="bg-dark">
@@ -306,7 +342,11 @@ function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/master
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";

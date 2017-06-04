@@ -155,6 +155,7 @@ if(!empty($_SESSION['active'])) {
 						<input type="text" name="email_cust" placeholder="Email" required class="form-control">
 						<br>
 						<input type="submit" value="SIGNUP As Customer">
+						<center><p><a href="./login.php">Have an account? Signin here</a></p>
 					</div>
 				</form>
 				</div>
@@ -195,6 +196,7 @@ if(!empty($_SESSION['active'])) {
 						<input type="text" name="email_vendor" placeholder="Email" required class="form-control">
 						<br>
 						<input type="submit" value="SIGNUP As Vendor">
+						<center><p><a href="./login.php">Have an account? Signin here</a></p>
 					</div>
 				</form>
 				</div>

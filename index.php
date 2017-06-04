@@ -2,6 +2,12 @@
 <html lang="en">
 <?php
 	include 'db_connect.php';
+	if(!empty($_SESSION['active'])) {
+		if($_SESSION['active']==2){
+		?>
+		<script>document.location.href="profil.php";</script>
+	<?php }
+}
 ?>
 <head>
 <meta charset="utf-8">

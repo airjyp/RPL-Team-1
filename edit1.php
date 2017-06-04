@@ -72,7 +72,7 @@ $avatar = $data['avatar'];
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
 			<?php
-			if(!empty($_SESSION['status'])) {
+			if(!empty($_SESSION['active']==1)) {
 			?>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
 			<?php } else {
@@ -150,7 +150,7 @@ $avatar = $data['avatar'];
                               <li class="list-group-item">Last Name    : <br><i class="fa fa-group"></i> <input type="text" name="lname_cust" required value= "<?php echo $lname_cust?>"/> </li>
                               <li class="list-group-item">My birthday    : <br><i class="fa fa-spinner"></i> <input type="date" name="birthdate"  value= "<?php echo $birthdate?>"/> </li>
                               <li class="list-group-item">Address    : <br><i class="fa fa-home"></i> <input type="text" name="address_cust"  value= "<?php echo $address_cust?>"/> </li>
-                              <li class="list-group-item">Telephone number    : <br><i class="fa fa-phone"></i> <input type="number" name="telephone_cust" required value= "<?php echo $telephone_cust?>"/> </li>
+                              <li class="list-group-item">Telephone number    : <br><i class="fa fa-phone"></i> <input type="text" onkeypress='return event.charCode >=48 && event.charCode <= 57' maxlength="12" name="telephone_cust" placeholder="Telephone" required value= "<?php echo $telephone_cust?>"/> </li>
                               <li class="list-group-item">Email   : <br><i class="fa fa-envelope"></i> <input type="email" name="email_cust" required value= "<?php echo $email_cust?>"/> </li>
                               <li class="list-group-item">About me    : <br><i class="fa fa-comment"></i> <input type="text" name="aboutme"  value= "<?php echo $aboutme?>"/> </li>
                            </ul>

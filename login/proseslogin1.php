@@ -11,7 +11,7 @@
 		if($_SESSION['id'] == '1'){
 ?>
 			<script language="javascript">alert("Hello, Customer!");</script>
-			<script> document.location.href='../dashboard.php';</script>
+			<script> document.location.href='../adminsuper.php';</script>
 <?php
 		}
 		else {

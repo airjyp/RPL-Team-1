@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <?php
 	include 'db_connect.php';
-	session_start();
+	$id = $_SESSION['id'];
+	$quer = mysqli_query($connect, "SELECT * FROM vendor JOIN category WHERE id_category='$id'");
+	$dat = mysqli_fetch_array($quer);
 ?>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Photography - Lavender</title>
+<title><?php echo $id;?> - Lavender</title>
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 <!-- Custom Fonts -->
@@ -51,8 +53,7 @@
 			<li>
 			<a class="page-scroll" href="index.php#services">Services</a>
 			</li>
-			<?php
-			if(!empty($_SESSION['status'])) {
+			<?php if(!empty($_SESSION['active']==1)) {
 			?>
 			<li> <a href="#">Profile</a> </li>
 			<li> <a href="login/logoutproses.php">Logout</a> </li>
@@ -86,7 +87,7 @@
 				<h2 data-animation="animated bounceInDown">
 				Welcome to </h2>
 				<h1 data-animation="animated bounceInUp">
-				Lavender's Photographer </h1>
+				<?php $dat['des_category2']; ?></h1>
 			</div>
 		</div>
 		<!-- /.item -->
@@ -123,13 +124,7 @@
 			<h2 class="section-heading">OUR <b>PHOTOGRAPHER</b></h2>
 			<hr>
 			<p>
-				 Capturing the "once in a life time" events, happy faces, smiles, happy tears have special meaning in our hearts
-			</p>
-			<p>
-				 Our clients are not just clients, but they become our good friends
-			</p>
-			<p>
-				 We always capture the best moment of their happiest days of their life
+
 			</p>
 	</div>
 </div>
@@ -141,6 +136,10 @@
 ================================================== -->
 <section class="no-padding">
 <div class="col-md-4 bg-primary no-padding teambox">
+	<?php
+	$data = mysqli_fetch_array($sql);
+	$result = $data['fname_vendor'];
+	 ?>
 <div class="team-thumb overlay-image view-overlay">
 	<img src="img/sinduwinarta.jpg" alt="" class="img-responsive">
 	<div class="mask team_quote">
@@ -151,17 +150,12 @@
 		</div>
 	</div>
 </div>
-<h2>SINDUWINARTA</h2>
+<?php
+echo "<h2><a href='profil1.php?id_vendor=".$data['id_vendor']."';>$result</a></h2>";
+?>
 <p>
 	 PHOTOGRAPHY
 </p>
-<div class="team-social">
-	<a href="#"><i class="fa fa-twitter"></i></a>
-	<a href="#"><i class="fa fa-linkedin"></i></a>
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-google-plus"></i></a>
-	<a href="#"><i class="fa fa-skype"></i></a>
-</div>
 </div>
 <div class="col-md-4 bg-dark no-padding teambox">
 <div class="team-thumb overlay-image view-overlay">
@@ -174,17 +168,13 @@
 		</div>
 	</div>
 </div>
-<h2><a href="profil.php">VANILLA LATTE</a></h2>
+
+<?php
+echo "<h2><a href='profil1.php?id_vendor=".$data['id_vendor']."';>$result</a></h2>";
+?>
 <p>
-	 PHOTOGRAPHY
+	 <?php echo $dat['name_category']; ?>
 </p>
-<div class="team-social">
-	<a href="#"><i class="fa fa-twitter"></i></a>
-	<a href="#"><i class="fa fa-linkedin"></i></a>
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-google-plus"></i></a>
-	<a href="#"><i class="fa fa-skype"></i></a>
-</div>
 </div>
 <div class="col-md-4 bg-primary no-padding teambox">
 <div class="team-thumb overlay-image view-overlay">
@@ -197,25 +187,15 @@
 		</div>
 	</div>
 </div>
+
 <h2>IMAGENIC</h2>
 <p>
 	 PHOTOGRAPHY
 </p>
-<div class="team-social">
-	<a href="#"><i class="fa fa-twitter"></i></a>
-	<a href="#"><i class="fa fa-linkedin"></i></a>
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-google-plus"></i></a>
-	<a href="#"><i class="fa fa-skype"></i></a>
-</div>
 </div>
 </section>
 <div class="clearfix">
 </div>
-
-</br>
-</br>
-
 
 <!-- Section Team 2
 ================================================== -->
@@ -235,13 +215,6 @@
 <p>
 	 PHOTOGRAPHY
 </p>
-<div class="team-social">
-	<a href="#"><i class="fa fa-twitter"></i></a>
-	<a href="#"><i class="fa fa-linkedin"></i></a>
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-google-plus"></i></a>
-	<a href="#"><i class="fa fa-skype"></i></a>
-</div>
 </div>
 <div class="col-md-4 bg-dark no-padding teambox">
 <div class="team-thumb overlay-image view-overlay">
@@ -258,13 +231,6 @@
 <p>
 	 PHOTOGRAPHY
 </p>
-<div class="team-social">
-	<a href="#"><i class="fa fa-twitter"></i></a>
-	<a href="#"><i class="fa fa-linkedin"></i></a>
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-google-plus"></i></a>
-	<a href="#"><i class="fa fa-skype"></i></a>
-</div>
 </div>
 <div class="col-md-4 bg-primary no-padding teambox">
 <div class="team-thumb overlay-image view-overlay">
@@ -281,13 +247,6 @@
 <p>
 	 PHOTOGRAPHY
 </p>
-<div class="team-social">
-	<a href="#"><i class="fa fa-twitter"></i></a>
-	<a href="#"><i class="fa fa-linkedin"></i></a>
-	<a href="#"><i class="fa fa-facebook"></i></a>
-	<a href="#"><i class="fa fa-google-plus"></i></a>
-	<a href="#"><i class="fa fa-skype"></i></a>
-</div>
 </div>
 </section>
 <div class="clearfix">

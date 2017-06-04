@@ -147,7 +147,8 @@ if(!empty($_SESSION['active'])) {
 						</div>
 					<div class="form-group">
 						<label>Telephone</label>
-						<input type="number" name="telephone_cust" placeholder="Telephone" required minlength="10" class="form-control">
+						<input type="text" onkeypress='return event.charCode >=48 && event.charCode <= 57' maxlength="12" name="telephone_cust" placeholder="Telephone" required minlength="10" class="form-control">
+
 					</div>
 					<div class="form-group">
 						<label>Email</label>
@@ -187,7 +188,7 @@ if(!empty($_SESSION['active'])) {
 						</div>
 					<div class="form-group">
 						<label>Telephone</label>
-						<input type="number" name="telephone_vendor" placeholder="Telephone" required minlength="10" class="form-control">
+						<input type="text" onkeypress='return event.charCode >=48 && event.charCode <= 57' maxlength="12" name="telephone_vendor" placeholder="Telephone" required minlength="10" class="form-control">
 					</div>
 					<div class="form-group">
 						<label>Email</label>

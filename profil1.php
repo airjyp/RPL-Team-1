@@ -2,11 +2,14 @@
 <html>
 <?php
 	include 'db_connect.php';
-	$id = $_SESSION['id'];
+	if(empty($_SESSION['active'])){
+		$_SESSION['active']=0;
+	}
+	$id = $_GET['id_vendor'];
 	$query = mysqli_query($connect, "SELECT * FROM vendor WHERE id_vendor='$id'");
 	$data = mysqli_fetch_array($query);
 ?>
-<title><?php echo $data['username_vendor'];?>'s vendor</title>
+<title><?php echo $data['username_vendor']; ?>'s vendor</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
